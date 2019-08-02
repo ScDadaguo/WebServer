@@ -29,4 +29,7 @@ public class Response {
     private String contentType = DEFAULT_CONTENT_TYPE;
     private byte[] body = new byte[0];
     private AbstractRequestHandler requestHandler;
+
+    public void addCookie(Cookie jsessionid) {
+    }
 }
