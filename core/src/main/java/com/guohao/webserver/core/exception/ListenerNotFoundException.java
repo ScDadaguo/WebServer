@@ -4,8 +4,8 @@ import com.guohao.webserver.core.enumeration.HttpStatus;
 import com.guohao.webserver.core.exception.base.ServletException;
 
 /**
- * @author sinjinsong
- * @date 2018/5/3
+ * @author guohao
+ * @date 2019/5/3
  * 未找到对应的Listener（web.xml配置错误）
  */
 public class ListenerNotFoundException extends ServletException {

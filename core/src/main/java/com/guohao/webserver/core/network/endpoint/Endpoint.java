@@ -31,7 +31,7 @@ public abstract class Endpoint {
      */
     public static Endpoint getInstance(String connector) {
         StringBuilder sb = new StringBuilder();
-        sb.append("com.sinjinsong.webserver.core.network.endpoint")
+        sb.append("com.guohao.webserver.core.network.endpoint")
                 .append(".")
                 .append(connector)
                 .append(".")

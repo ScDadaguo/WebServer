@@ -9,8 +9,8 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author sinjinsong
- * @date 2018/5/2
+ * @author guohao
+ * @date 2019/5/2
  */
 @Slf4j
 public class IdleConnectionCleaner implements Runnable {

@@ -21,7 +21,7 @@ import java.util.List;
 
 /**
  * @author guohao
- * @date 2018/5/4
+ * @date 2019/5/4
  * RequestHandler 的父类，通过父类来复用成员变量和部分方法
  * 不同IO模型的RequestHandler基本是在将Response写回客户端这部分有不同的实现，在这里被设置为了抽象方法
  */

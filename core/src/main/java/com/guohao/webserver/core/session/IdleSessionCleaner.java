@@ -1,8 +1,4 @@
-/*
- * Copyright: 2019 dingxiang-inc.com Inc. All rights reserved.
- */
-
-package com.guohao.webserver.core;
+package com.guohao.webserver.core.session;
 
 import com.guohao.webserver.core.context.WebApplication;
 import lombok.extern.slf4j.Slf4j;
@@ -13,13 +9,14 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @FileName: IdleSessionCleaner.java
- * @Description: IdleSessionCleaner.java类说明
- * @Author: guohao
- * @Date: 2019/8/2 14:37
+ * @author guohao
+ * @date 2018/5/3
+ * 
+ * 过期session的清除器
  */
 @Slf4j
 public class IdleSessionCleaner implements Runnable {
+    
     private ScheduledExecutorService executor;
 
     public IdleSessionCleaner() {
@@ -31,11 +28,11 @@ public class IdleSessionCleaner implements Runnable {
         };
         this.executor = Executors.newSingleThreadScheduledExecutor(threadFactory);
     }
-
+    
     public void start() {
         executor.scheduleAtFixedRate(this, 5, 5, TimeUnit.SECONDS);
     }
-
+    
     @Override
     public void run() {
         log.info("开始扫描过期session...");
