@@ -4,7 +4,7 @@ import com.guohao.webserver.core.enumeration.HttpStatus;
 import lombok.Getter;
 
 /**
- * Created by SinjinSong on 2017/7/20.
+ * Created by guohao on 2019/7/20.
  * 根异常
  */
 @Getter

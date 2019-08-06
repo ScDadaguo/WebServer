@@ -4,7 +4,7 @@ import com.guohao.webserver.core.enumeration.HttpStatus;
 import com.guohao.webserver.core.exception.base.ServletException;
 
 /**
- * Created by SinjinSong on 2017/7/21.
+ * Created by guohao on 2019/7/21.
  * 500异常
  */
 public class ServerErrorException extends ServletException {

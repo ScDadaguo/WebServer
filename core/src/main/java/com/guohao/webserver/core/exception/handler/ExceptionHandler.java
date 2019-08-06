@@ -13,7 +13,7 @@ import java.io.IOException;
 import static com.guohao.webserver.core.constant.ContextConstant.ERROR_PAGE;
 
 /**
- * Created by SinjinSong on 2017/7/20.
+ * Created by guohao on 2019/7/20.
  * 异常处理器
  * 会根据异常对应的HTTP Status设置response的状态以及相应的错误页面
  */
