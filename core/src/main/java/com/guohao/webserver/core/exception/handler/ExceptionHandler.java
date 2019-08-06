@@ -1,28 +1,25 @@
-/*
- * Copyright: 2019 dingxiang-inc.com Inc. All rights reserved.
- */
-
 package com.guohao.webserver.core.exception.handler;
 
-import com.guohao.webserver.core.exception.base.ServletException;
-import com.guohao.webserver.core.response.Header;
-import com.guohao.webserver.core.response.Response;
-import com.guohao.webserver.core.util.IOUtil;
-import com.guohao.webserver.core.wrapper.SocketWrapper;
+import com.sinjinsong.webserver.core.exception.RequestInvalidException;
+import com.sinjinsong.webserver.core.exception.base.ServletException;
+import com.sinjinsong.webserver.core.network.wrapper.SocketWrapper;
+import com.sinjinsong.webserver.core.response.Header;
+import com.sinjinsong.webserver.core.response.Response;
+import com.sinjinsong.webserver.core.util.IOUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 
-import static com.guohao.webserver.core.constant.ContextConstant.ERROR_PAGE;
+import static com.sinjinsong.webserver.core.constant.ContextConstant.ERROR_PAGE;
 
 /**
- * @FileName: ExceptionHandler.java
- * @Description: ExceptionHandler.java类说明
- * @Author: guohao
- * @Date: 2019/8/2 10:56
+ * Created by SinjinSong on 2017/7/20.
+ * 异常处理器
+ * 会根据异常对应的HTTP Status设置response的状态以及相应的错误页面
  */
 @Slf4j
 public class ExceptionHandler {
+
     public void handle(ServletException e, Response response, SocketWrapper socketWrapper) {
         try {
             if (e instanceof RequestInvalidException) {

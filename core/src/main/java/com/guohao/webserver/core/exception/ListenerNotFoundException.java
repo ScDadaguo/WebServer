@@ -6,11 +6,11 @@ import com.sinjinsong.webserver.core.exception.base.ServletException;
 /**
  * @author sinjinsong
  * @date 2018/5/3
- * 未找到对应的Filter（web.xml配置错误）
+ * 未找到对应的Listener（web.xml配置错误）
  */
-public class FilterNotFoundException extends ServletException {
+public class ListenerNotFoundException extends ServletException {
     private static final HttpStatus status = HttpStatus.NOT_FOUND;
-    public FilterNotFoundException() {
+    public ListenerNotFoundException() {
         super(status);
     }
 }

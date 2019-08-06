@@ -4,13 +4,12 @@ import com.sinjinsong.webserver.core.enumeration.HttpStatus;
 import com.sinjinsong.webserver.core.exception.base.ServletException;
 
 /**
- * @author sinjinsong
- * @date 2018/5/3
- * 未找到对应的Filter（web.xml配置错误）
+ * Created by SinjinSong on 2017/7/21.
+ * 静态资源未找到
  */
-public class FilterNotFoundException extends ServletException {
+public class ResourceNotFoundException extends ServletException {
     private static final HttpStatus status = HttpStatus.NOT_FOUND;
-    public FilterNotFoundException() {
+    public ResourceNotFoundException() {
         super(status);
     }
 }
