@@ -1,7 +1,3 @@
-/*
- * Copyright: 2019 dingxiang-inc.com Inc. All rights reserved.
- */
-
 package com.guohao.webserver.core.network.handler;
 
 import com.guohao.webserver.core.context.ServletContext;
@@ -12,23 +8,23 @@ import com.guohao.webserver.core.exception.base.ServletException;
 import com.guohao.webserver.core.exception.handler.ExceptionHandler;
 import com.guohao.webserver.core.filter.Filter;
 import com.guohao.webserver.core.filter.FilterChain;
+import com.guohao.webserver.core.network.wrapper.SocketWrapper;
 import com.guohao.webserver.core.request.Request;
 import com.guohao.webserver.core.resource.ResourceHandler;
 import com.guohao.webserver.core.response.Response;
 import com.guohao.webserver.core.servlet.Servlet;
-import com.guohao.webserver.core.network.wrapper.SocketWrapper;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
-/**
- * @FileName: AbstractRequestHandler.java
- * @Description: AbstractRequestHandler.java类说明
- * @Author: guohao
- * @Date: 2019/8/2 11:59
- */
 
+/**
+ * @author guohao
+ * @date 2018/5/4
+ * RequestHandler 的父类，通过父类来复用成员变量和部分方法
+ * 不同IO模型的RequestHandler基本是在将Response写回客户端这部分有不同的实现，在这里被设置为了抽象方法
+ */
 
 @Slf4j
 @Getter

@@ -6,14 +6,15 @@ package com.guohao.webserver.core.network.dispatcher;
 
 import com.guohao.webserver.core.context.ServletContext;
 import com.guohao.webserver.core.context.WebApplication;
+import com.guohao.webserver.core.exception.ServerErrorException;
 import com.guohao.webserver.core.exception.base.ServletException;
 import com.guohao.webserver.core.exception.handler.ExceptionHandler;
+import com.guohao.webserver.core.network.handler.nio.NioRequestHandler;
 import com.guohao.webserver.core.network.wrapper.SocketWrapper;
 import com.guohao.webserver.core.network.wrapper.nio.NioSocketWrapper;
 import com.guohao.webserver.core.request.Request;
 import com.guohao.webserver.core.resource.ResourceHandler;
 import com.guohao.webserver.core.response.Response;
-import com.guohao.webserver.core.wrapper.SocketWrapper;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.ByteArrayOutputStream;
@@ -31,7 +32,7 @@ import java.util.concurrent.TimeUnit;
  * @Date: 2019/8/6 11:56
  */
 @Slf4j
-public  class NioDispatcher {
+public class NioDispatcher {
     protected ResourceHandler resourceHandler;
     protected ExceptionHandler exceptionHandler;
     protected ThreadPoolExecutor pool;

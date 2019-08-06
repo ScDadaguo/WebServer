@@ -6,6 +6,7 @@ package com.guohao.webserver.core.network.wrapper.nio;
 
 import com.guohao.webserver.core.network.connector.nio.NioPoller;
 import com.guohao.webserver.core.network.endpoint.nio.NioEndpoint;
+import com.guohao.webserver.core.network.wrapper.SocketWrapper;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
@@ -21,7 +22,7 @@ import java.nio.channels.SocketChannel;
 
 @Slf4j
 @Data
-public class NioSocketWrapper  {
+public class NioSocketWrapper implements SocketWrapper {
     private final NioEndpoint server;
     private final SocketChannel socketChannel;
     private final NioPoller nioPoller;

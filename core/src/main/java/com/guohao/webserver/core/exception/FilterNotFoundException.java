@@ -1,7 +1,7 @@
 package com.guohao.webserver.core.exception;
 
-import com.sinjinsong.webserver.core.enumeration.HttpStatus;
-import com.sinjinsong.webserver.core.exception.base.ServletException;
+import com.guohao.webserver.core.enumeration.HttpStatus;
+import com.guohao.webserver.core.exception.base.ServletException;
 
 /**
  * @author sinjinsong
